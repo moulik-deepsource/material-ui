@@ -1,8 +1,35 @@
 version = 1
 
+exclude_patterns = [
+  "packages/eslint-plugin-material-ui/**",
+  "**/examples"
+]
+
+test_patterns = [
+  "**/test"
+]
+
 [[analyzers]]
 name = "javascript"
 enabled = true
 
   [analyzers.meta]
   plugins = ["react"]
+  dependency_file_paths = [
+    "packages/babel-plugin-unwrap-createstyles",
+	  "packages/material-ui-icons",			
+    "packages/material-ui-types",
+    "packages/material-ui-lab",
+    "packages/material-ui-unstyled",
+    "packages/material-ui",
+    "packages/material-ui-styled-engine"	,	
+    "packages/material-ui-utils",
+    "packages/material-ui-codemod",			
+    "packages/material-ui-styled-engine-sc",
+  	"packages/netlify-plugin-cache-docs",
+    "packages/material-ui-docs",	
+		"packages/material-ui-styles"	,	
+    "packages/typescript-to-proptypes",
+    "packages/material-ui-envinfo",
+		"packages/material-ui-system",
+  ]
